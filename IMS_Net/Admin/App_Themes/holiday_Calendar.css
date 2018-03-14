@@ -1,0 +1,75 @@
+﻿body {
+}
+
+.mainTableFrame
+{
+    border-right: #00bfff thin solid;
+    border-top: #00bfff thin solid;
+    border-left: #00bfff thin solid;
+    border-bottom: #00bfff thin solid;
+    width: 800px;
+}
+
+.subHeader
+{
+    text-transform: capitalize;
+    color: #6fa1d9;
+    font-family: Arial, Verdana;
+    font-weight: normal;
+    font-size: 1.3em;
+    background-color: #f5f5f5;
+    vertical-align: top;
+    text-align: left;
+    page-break-after: auto;
+}
+
+.calendarFrame
+{
+    border-right: #add8e6 thin solid;
+    border-top: #add8e6 thin solid;
+    border-left: #add8e6 thin solid;
+    border-bottom: #add8e6 thin solid;
+}
+
+.calendarMonthYear
+{
+    font-size: 0.9em;
+    color: #ffffff;
+    font-family: Arial;
+    font-weight: bold;
+    background-color: #335ea8;
+    letter-spacing: 1px;
+}
+
+.calendarDay
+{
+    font-size: 0.7em;
+    color: #ffffff;
+    font-family: Arial;
+    font-weight: bold;
+    background-color: #6fa1d9;
+}
+
+.hasEvent
+{
+    font-size: 0.7em;
+    color: #ffffff;
+    font-family: Verdana, Arial;
+    background-position: center center;
+    background-image: url(Images/event.gif);
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    vertical-align: middle
+}
+
+.hasNoEvent
+{
+    font-size: 0.7em;
+    font-family: Verdana, Arial;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+}

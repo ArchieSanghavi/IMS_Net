@@ -1,7 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/IMSNetMaster.Master" AutoEventWireup="true" CodeBehind="ComplaintMapping.aspx.cs" Inherits="IMS_Net.Admin.ComplaintMapping" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <asp:UpdatePanel ID="updatePanel2" runat="server" EnableViewState="true">
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <asp:UpdatePanel ID="updatePanel2" runat="server" EnableViewState="true">
    <ContentTemplate>
    
     <table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -58,21 +61,19 @@
                 <asp:Label ID="Label4" runat="server" ForeColor="Red">*</asp:Label>
             </td>
             <td class="textbox Pad-T10" align="left" width="25%">
-                <asp:Button runat="server" ID="btnpopup" Text="Select Complaint" Width="150px" CausesValidation="false" CssClass="clsButton" Style="vertical-align: top;" OnClick="btnpopup_Click"/>
+                <asp:Button runat="server" ID="btnpopup" Text="Select Complaint" Width="150px" CausesValidation="false" CssClass="clsButton" Style="vertical-align: top;" />
                 <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender1" runat="server" CancelControlID="btnCancel" OkControlID="btnOkay"
                     TargetControlID="btnpopup" PopupControlID="Panel1" PopupDragHandleControlID="Panel1" Drag="true" BackgroundCssClass="ModalPopupBG">
                 </ajaxToolkit:ModalPopupExtender>
 
-                <asp:Panel ID="Panel1" Style="display: none" runat="server">
+                 <asp:Panel ID="Panel1" Style="display: none" runat="server">
                     <div style="min-width: 200px; min-height: 150px; background: gray; border: solid;">
                         <div class="PopupHeader" id="PopupHeader" style="text-align: center;">complaint_code</div>
                         <div class="PopupBody">
                             Search: 
-                            <asp:TextBox ID="txtsearch" runat="server" OnTextChanged="search_textChanged" AutoPostBack="true"></asp:TextBox>
+                            <asp:TextBox ID="txtsearch" runat="server" OnTextChanged="search_textChanged" AutoPostBack="true" AutoCompleteType="Search"></asp:TextBox>
                         </div>
                         <div class="PopupBody" style="overflow-y: scroll; height: 100px;">
-                            <asp:UpdatePanel ID="updatepanelpopup" runat="server">
-                                <ContentTemplate>
                                     <asp:GridView ID="popupgv" runat="server" AutoGenerateColumns="false" CssClass="gridTableData">
                                         <HeaderStyle CssClass="gridHeader" />
 
@@ -82,19 +83,11 @@
                                                     <asp:CheckBox runat="server" ID="chkpopup"  />
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-                                            <asp:BoundField DataField="Description" HeaderText="complaint" />
-                                            <asp:BoundField DataField="Complaint_Code" HeaderText="code" />
+                                            <asp:BoundField DataField="Description" HeaderText="Complaint Description" />
+                                            <asp:BoundField DataField="Complaint_Code" HeaderText="Complaint Code" />
                                         </Columns>
                                     </asp:GridView>
-                                </ContentTemplate>
-                                <Triggers>
-                                    <asp:AsyncPostBackTrigger ControlID="txtsearch" EventName="TextChanged" />
-
-                                </Triggers>
-                            </asp:UpdatePanel>
-
-                            <!--  <asp:CheckBoxList ID="CheckBoxList1" runat="server"></asp:CheckBoxList> -->
-
+                          
                         </div>
                         <div class="Controls">
                             <asp:Button ID="btnOkay" runat="server" Text="OK" CssClass="clsButton" />
@@ -102,6 +95,7 @@
                         </div>
                     </div>
                 </asp:Panel>
+ 
 
                 <asp:TextBox runat="server" ID="txtcompaintcode" TextMode="MultiLine" ReadOnly="true" Visible="false"></asp:TextBox>
 
@@ -149,10 +143,10 @@
             </td>
         </tr>
     </table>
-          </ContentTemplate>
+  </ContentTemplate>
    
 </asp:UpdatePanel>
- 
+   
     <script type="text/javascript">
 
         function HideinsertLabel() {
@@ -168,7 +162,7 @@
                  document.getElementById("<%=lblupdate.ClientID %>").style.display = "none";
             }, seconds * 500);
         };
-        function HideupdateLabel() {
+       function HideupdateLabel() {
             var seconds = 5;
             setTimeout(function () {
                 document.getElementById("<%=r_Error1.ClientID %>").style.display = "none";

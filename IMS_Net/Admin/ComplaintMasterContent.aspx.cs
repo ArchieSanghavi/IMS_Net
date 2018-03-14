@@ -4,12 +4,13 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using IMS_Net.Admin.DB;
 
 namespace IMS_Net.Admin
 {
     public partial class ComplaintMaster : System.Web.UI.Page
     {
-        string strConnections=ConfigurationManager.ConnectionStrings["ConStr"].ConnectionString;
+        string strConnections = ConfigurationManager.ConnectionStrings["ConStr"].ConnectionString;
 
         SqlCommand cmd;
 
@@ -21,7 +22,7 @@ namespace IMS_Net.Admin
         {
             if (!IsPostBack)
             {
-                r_Error1.Visible= btnUpdate.Visible = false;
+                r_Error1.Visible = btnUpdate.Visible = false;
                 FillGridView();
                 Severity();
             }
@@ -40,7 +41,7 @@ namespace IMS_Net.Admin
                 DataUtility data = null;
                 if (Page.IsValid)
                 {
-                    btnUpdate.Visible= false;
+                    btnUpdate.Visible = false;
                     SqlParameter[] param ={
                                             new SqlParameter("@ComplaintDescription", txtDescription.Text.Trim()),
                                             new SqlParameter("@ComplaintSeverity", ddlSeverity.SelectedValue),
@@ -50,8 +51,8 @@ namespace IMS_Net.Admin
                                           };
 
                     data = new DataUtility();
-                    
-                    data.ExecuteProc("ComplaintInsert",param);
+
+                    data.ExecuteProc("ComplaintInsert", param);
 
                     Clear();
 
@@ -75,12 +76,12 @@ namespace IMS_Net.Admin
 
         protected void lnkView_Click(object sender, EventArgs e)
         {
-            DataSet ds = null;            
+            DataSet ds = null;
             try
             {
                 btnSave.Visible = false;
-                r_Error1.Visible= false;
-                lblSuccessMsg.Text= lblErrorMsg.Text  = "";
+                r_Error1.Visible = false;
+                lblSuccessMsg.Text = lblErrorMsg.Text = "";
                 btnUpdate.Visible = true;
 
                 string ComplaintCode = Convert.ToString((sender as LinkButton).CommandArgument);
@@ -88,11 +89,11 @@ namespace IMS_Net.Admin
                                             new SqlParameter("@ComplaintCode", ComplaintCode)
                                       };
                 ds = new DataSet();
-                ds = IMS_Net.Admin.Utility3.Database.GetData(strConnections, "ComplaintGridView",param);
+                ds = IMS_Net.Admin.Utility3.Database.GetData(strConnections, "ComplaintGridView", param);
                 /*da.SelectCommand.Parameters.AddWithValue("@ServiceLineCode", servicelinecode);*/
                 //dt = new DataTable();
                 //dt = ds.Tables[0];
-               /* da.Fill(dt);*/
+                /* da.Fill(dt);*/
 
                 btnUpdate.CommandArgument = ds.Tables[0].Rows[0]["Complaint_Code"].ToString();
                 txtDescription.Text = ds.Tables[0].Rows[0]["Description"].ToString();
@@ -100,7 +101,7 @@ namespace IMS_Net.Admin
                 rblActive.SelectedValue = ds.Tables[0].Rows[0]["Active"].ToString();
             }
 
-            catch  { throw; }
+            catch { throw; }
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)
@@ -111,7 +112,7 @@ namespace IMS_Net.Admin
                 string ComplaintCode = Convert.ToString((sender as Button).CommandArgument);
                 DataUtility data = null;
                 if (Page.IsValid)
-                {                    
+                {
                     SqlParameter[] param ={
                                             new SqlParameter("@ComplaintCode", ComplaintCode),
                                             new SqlParameter("@ComplaintDescription", txtDescription.Text.Trim()),
@@ -125,7 +126,7 @@ namespace IMS_Net.Admin
                     data.ExecuteProc("ComplaintInsert", param);
 
                     Clear();
-                  //  Severity();
+                    //  Severity();
                     FillGridView();
 
                     r_Error1.Visible = true;
@@ -171,11 +172,11 @@ namespace IMS_Net.Admin
             txtDescription.Text = lblErrorMsg.Text = lblSuccessMsg.Text = "";
             ddlSeverity.ClearSelection();
             btnSave.Visible = true;
-            btnUpdate.Visible =r_Error1.Visible= false;
+            btnUpdate.Visible = r_Error1.Visible = false;
             rblActive.SelectedValue = "True";
         }
 
-        public void ComplaintMaster_PageIndexChanging(object sender,GridViewPageEventArgs e)
+        public void ComplaintMaster_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvComplaint.PageIndex = e.NewPageIndex;
             this.FillGridView();

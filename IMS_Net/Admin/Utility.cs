@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Data;
 using System.Configuration;
 using System.Web;
@@ -16,6 +16,9 @@ using System.IO;
 using System.Globalization;
 using System.Data.OleDb;
 
+/// <summary>
+/// Summary description for Utility
+/// </summary>
 namespace IMS_Net.Admin
 {
     public class Utility
@@ -1693,7 +1696,7 @@ namespace IMS_Net.Admin
                 DataSet ds = new DataSet();
                 try
                 {
-                    string autoCode;
+                    //  string autoCode;
                     objcmd = new SqlCommand(procName, objcon);
                     objcmd.CommandType = CommandType.StoredProcedure;
                     objcmd.Parameters.Add("@F_DATE", SqlDbType.VarChar, 20).Value = Convert.ToDateTime(fromDate).ToShortDateString();
@@ -1741,7 +1744,7 @@ namespace IMS_Net.Admin
                 DataSet ds = new DataSet();
                 try
                 {
-                    string autoCode;
+                    // string autoCode;
 
                     objcmd = new SqlCommand(procName, objcon);
                     objcmd.CommandTimeout = 120;
@@ -2810,7 +2813,7 @@ namespace IMS_Net.Admin
                     // 04 Apr 12
                     objcmd.Parameters.Add("@AssetStickerNo", SqlDbType.VarChar).Value = vAssetStickerNo;
                     objcmd.Parameters.Add("@vCall_Type", SqlDbType.VarChar).Value = vCallType; // New code 28 march 12
-                                                                                               // 06 june 13 adding call category
+                    // 06 june 13 adding call category
                     objcmd.Parameters.Add("@CallCategory", SqlDbType.VarChar).Value = vCallCategory; // New code 28 march 12
 
                     if (string.IsNullOrEmpty(expectedCloseDate))
@@ -3281,7 +3284,7 @@ namespace IMS_Net.Admin
 
                             bodyLead = "<div style='font-family:Century Gothic;font-size:14px'>" + "Hi, <br/><br/>";
                             bodyLead = bodyLead + "This is to inform you that IMS Ticket number  " + calNo;
-                            bodyLead = bodyLead + " is logged under " + SEVERITY_Description + " severity on " + OnDate + " at " + DateTime.Now.ToString("h:mm:ss tt") + ".<br/> Pls. find details below â€“<br/><br/> </div> ";
+                            bodyLead = bodyLead + " is logged under " + SEVERITY_Description + " severity on " + OnDate + " at " + DateTime.Now.ToString("h:mm:ss tt") + ".<br/> Pls. find details below –<br/><br/> </div> ";
 
                             bodyLead = bodyLead + "<div style='font-family:Century Gothic;font-size:14px'>";
                             bodyLead = bodyLead + "<table style='font-size:14px;font-family:Century Gothic' width='100%'><tr><td width='20%'> ";
@@ -3396,7 +3399,7 @@ namespace IMS_Net.Admin
                 {
 
                     string from = mailFromAddress; //"Zydusmail-noreply@zyduscadila.com";
-                                                   // send SMTP mail
+                    // send SMTP mail
 
 
                     //*************** Mail being Sent To Engineer
@@ -3710,7 +3713,7 @@ namespace IMS_Net.Admin
                             bodyLead = bodyLead + "This is to inform that the IMS call number " + calNo + " booked under " + originalSeverity + " severity ";
                             bodyLead = bodyLead + "have been attended on  " + CurrentStatusDate + " at " + DateTime.Now.ToString("h:mm:ss tt") + " <br/>";
                             //call_date DateTime.Now.ToString()
-                            bodyLead = bodyLead + " Pls. find details below â€“  <br/><br/></div> ";
+                            bodyLead = bodyLead + " Pls. find details below –  <br/><br/></div> ";
                             bodyLead = bodyLead + "<div style='font-family:Century Gothic;font-size:14px'>";
                             bodyLead = bodyLead + "<table style='font-size:14px;font-family:Century Gothic' width='100%'><tr><td width='20%'> ";
                             bodyLead = bodyLead + "Call No.  : </td><td width='80%'> " + calNo + "</td></tr><tr><td>";
@@ -3740,7 +3743,7 @@ namespace IMS_Net.Admin
                             //bodyLead = bodyLead + "<b>Status Date  : </b></td><td>" + CurrentStatusDate + " " + DateTime.Now.ToString("h:mm:ss tt") + "</td></tr><tr><td>";
                             //bodyLead = bodyLead + "<b>Call Status :</b></td><td> " + Status + "</td></tr><tr><td>";
                             //bodyLead = bodyLead + "<b>Solution :</b> </td><td>" + Solution + "</td></tr><tr><td>";
-                            //bodyLead = bodyLead + "<b>Engineerâ€™s Comments  :</b> </td><td>" + EngComments + "<br></td></tr>";
+                            //bodyLead = bodyLead + "<b>Engineer’s Comments  :</b> </td><td>" + EngComments + "<br></td></tr>";
 
                             //// if call is atteneded earlier then display history                       
                             //DataSet dsCallHistory = new DataSet();
@@ -3790,7 +3793,7 @@ namespace IMS_Net.Admin
 
                             //        bodyLead = bodyLead + "Call Status :</td><td> " + dsCallHistory.Tables[0].Rows[i]["Status"].ToString() + "</td></tr><tr><td>";
                             //        bodyLead = bodyLead + "Solution : </td><td>" + dsCallHistory.Tables[0].Rows[i]["Solution"].ToString() + "</td></tr><tr><td>";
-                            //        bodyLead = bodyLead + "Engineerâ€™s Comments  : </td><td>" + dsCallHistory.Tables[0].Rows[i]["Comments"].ToString() + "<br/></td></tr><tr><td>";
+                            //        bodyLead = bodyLead + "Engineer’s Comments  : </td><td>" + dsCallHistory.Tables[0].Rows[i]["Comments"].ToString() + "<br/></td></tr><tr><td>";
                             //        //bodyLead = bodyLead + " </td><td> &nbsp; <br/></td></tr><tr><td>";
 
                             //        bodyLead = bodyLead + " </td><td> &nbsp; <br/></td></tr>";
@@ -4364,7 +4367,7 @@ namespace IMS_Net.Admin
                         objcmd.Parameters.Add("@Flag", SqlDbType.VarChar).Value = flag;
                         objcmd.Parameters.Add("@Log_By", SqlDbType.VarChar).Value = name;
                         objcmd.Parameters.Add("@PageType", SqlDbType.VarChar).Value = PageType; // 25 dec 13
-                                                                                                //@PageType new line 
+                        //@PageType new line 
                         objcmd.CommandType = CommandType.StoredProcedure;
                     }
 
@@ -4459,7 +4462,7 @@ namespace IMS_Net.Admin
                         objcmd.Parameters.Add("@Flag", SqlDbType.VarChar).Value = flag;
                         objcmd.Parameters.Add("@Log_By", SqlDbType.VarChar).Value = name;
                         objcmd.Parameters.Add("@PageType", SqlDbType.VarChar).Value = PageType; // 25 dec 13
-                                                                                                //@PageType
+                        //@PageType
                         objcmd.CommandType = CommandType.StoredProcedure;
                     }
                     else if (flag == "Complaint" || flag == "PendingCallDetails")
