@@ -1,0 +1,10 @@
+F:\archie\IMS_Net\IMS_Net\obj\Debug\IMS_Net.csprojResolveAssemblyReference.cache
+F:\archie\IMS_Net\IMS_Net\obj\Debug\IMS_Net.csproj.CoreCompileInputs.cache
+F:\archie\IMS_Net\IMS_Net\bin\IMS_Net.dll.config
+F:\archie\IMS_Net\IMS_Net\bin\IMS_Net.dll
+F:\archie\IMS_Net\IMS_Net\bin\IMS_Net.pdb
+F:\archie\IMS_Net\IMS_Net\bin\ExcelLibrary.dll
+F:\archie\IMS_Net\IMS_Net\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\archie\IMS_Net\IMS_Net\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\archie\IMS_Net\IMS_Net\obj\Debug\IMS_Net.dll
+F:\archie\IMS_Net\IMS_Net\obj\Debug\IMS_Net.pdb

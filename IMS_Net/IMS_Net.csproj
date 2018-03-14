@@ -1,0 +1,285 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91D2A692-D171-48B5-A3C6-D40648445409}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IMS_Net</RootNamespace>
+    <AssemblyName>IMS_Net</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelLibrary">
+      <HintPath>.\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Complaint_Master.aspx" />
+    <Content Include="Admin\Service_Line_Module_Master.aspx" />
+    <Content Include="Admin\Service_Master.aspx" />
+    <Content Include="Admin\ComplaintMasterContent.aspx" />
+    <Content Include="Admin\ServiceMasterContent.aspx" />
+    <Content Include="Admin\Service_Line_ModuleContent.aspx" />
+    <Content Include="Admin\ComplaintMapping.aspx" />
+    <Content Include="App_Themes\GreenTheme\SkinFile.skin" />
+    <Content Include="App_Themes\GreenTheme\vssver.scc" />
+    <Content Include="App_Themes\vssver.scc" />
+    <Content Include="images\AccLogo.zip" />
+    <Content Include="images\AccLogo\AccLogo\vssver.scc" />
+    <Content Include="images\mainimg.psd" />
+    <Content Include="images\Untitled-2.psd" />
+    <Content Include="images\Untitled-4.psd" />
+    <Content Include="images\User Guide-IMS.pdf" />
+    <Content Include="images\vssver.scc" />
+    <Content Include="Admin\IMSNetMaster.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\AnonMasterStyle.css" />
+    <Content Include="App_Themes\Calender.css" />
+    <Content Include="App_Themes\holiday_Calendar.css" />
+    <Content Include="App_Themes\Link.css" />
+    <Content Include="App_Themes\Menu.css" />
+    <Content Include="App_Themes\pie.htc" />
+    <Content Include="App_Themes\StyleSheet.css" />
+    <Content Include="Global.asax" />
+    <Content Include="images\absu_logo_green.gif" />
+    <Content Include="images\Accenture.bmp" />
+    <Content Include="images\accenture_logo.gif" />
+    <Content Include="images\Accheader.JPG" />
+    <Content Include="images\acclogo.gif" />
+    <Content Include="images\AccLogo\AccLogo\images-Acc2.jpg" />
+    <Content Include="images\AccLogo\AccLogo\imagesAcc1.jpg" />
+    <Content Include="images\AccLogo\AccLogo\images_Acc21.jpg" />
+    <Content Include="images\AFLLogo.gif" />
+    <Content Include="images\bg_menu.gif" />
+    <Content Include="images\bg_submenu.gif" />
+    <Content Include="images\cat-li.gif" />
+    <Content Include="images\Collapse1.bmp" />
+    <Content Include="images\contact.gif" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\download.jpg" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\event.GIF" />
+    <Content Include="images\Expand1.bmp" />
+    <Content Include="images\footer_bg.gif" />
+    <Content Include="images\gridHeader.GIF" />
+    <Content Include="images\gridHeader1.GIF" />
+    <Content Include="images\h-art.gif" />
+    <Content Include="images\hbg.gif" />
+    <Content Include="images\Header.jpg" />
+    <Content Include="images\home.gif" />
+    <Content Include="images\img.jpg" />
+    <Content Include="images\ims.gif" />
+    <Content Include="images\IMSHEADER3.JPG" />
+    <Content Include="images\IMSInnerHeader.JPG" />
+    <Content Include="images\IMSLoginAccenture.png" />
+    <Content Include="images\IMSLoginZydus.png" />
+    <Content Include="images\IMSRepeat.jpg" />
+    <Content Include="images\IMS_InnerHeader.JPG" />
+    <Content Include="images\li-line.gif" />
+    <Content Include="images\lm-li.gif" />
+    <Content Include="images\Login.jpg" />
+    <Content Include="images\loginbtn.jpg" />
+    <Content Include="images\loginImage.png" />
+    <Content Include="images\Login_Old1.jpg" />
+    <Content Include="images\logout.gif" />
+    <Content Include="images\mainimg.jpg" />
+    <Content Include="images\MenuBG.jpg" />
+    <Content Include="images\minus.png" />
+    <Content Include="images\plus.png" />
+    <Content Include="images\show-calendar.gif" />
+    <Content Include="images\sitemap.gif" />
+    <Content Include="images\status_icon_green.gif" />
+    <Content Include="images\status_icon_red.gif" />
+    <Content Include="images\status_icon_yellow.gif" />
+    <Content Include="images\style.css" />
+    <Content Include="images\tb_h_bg_green.gif" />
+    <Content Include="images\TextBoxBG.jpg" />
+    <Content Include="images\Thankyou.png" />
+    <Content Include="images\tie_logo.gif" />
+    <Content Include="images\tiger2-798305.jpg" />
+    <Content Include="images\TigerWoods.jpg" />
+    <Content Include="images\top.jpg" />
+    <Content Include="images\topimg.JPG" />
+    <Content Include="images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="images\userH.ico" />
+    <Content Include="images\Users.ico" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Complaint_Master.aspx.cs">
+      <DependentUpon>Complaint_Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Complaint_Master.aspx.designer.cs">
+      <DependentUpon>Complaint_Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DataUtility.cs" />
+    <Compile Include="Admin\IMSNetMaster.Master.cs">
+      <DependentUpon>IMSNetMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IMSNetMaster.Master.designer.cs">
+      <DependentUpon>IMSNetMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Service_Line_Module_Master.aspx.cs">
+      <DependentUpon>Service_Line_Module_Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Service_Line_Module_Master.aspx.designer.cs">
+      <DependentUpon>Service_Line_Module_Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Service_Master.aspx.cs">
+      <DependentUpon>Service_Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Service_Master.aspx.designer.cs">
+      <DependentUpon>Service_Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Utility.cs" />
+    <Compile Include="Admin\Utility2.cs" />
+    <Compile Include="Admin\Utility3.cs" />
+    <Compile Include="Admin\ComplaintMasterContent.aspx.cs">
+      <DependentUpon>ComplaintMasterContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ComplaintMasterContent.aspx.designer.cs">
+      <DependentUpon>ComplaintMasterContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ServiceMasterContent.aspx.cs">
+      <DependentUpon>ServiceMasterContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ServiceMasterContent.aspx.designer.cs">
+      <DependentUpon>ServiceMasterContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Service_Line_ModuleContent.aspx.cs">
+      <DependentUpon>Service_Line_ModuleContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Service_Line_ModuleContent.aspx.designer.cs">
+      <DependentUpon>Service_Line_ModuleContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ComplaintMapping.aspx.cs">
+      <DependentUpon>ComplaintMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ComplaintMapping.aspx.designer.cs">
+      <DependentUpon>ComplaintMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="pageauth\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60371</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60372/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

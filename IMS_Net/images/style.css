@@ -1,0 +1,667 @@
+
+P
+{
+    margin: 5px 0px;
+}
+H1
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 4px;
+    margin: 0px;
+    font: bold 1.8em Arial, Sans-Serif;
+    padding-top: 8px;
+    letter-spacing: -1px;
+}
+H2
+{
+    font: bold 1.6em Arial, Sans-Serif;
+    letter-spacing: -1px;
+}
+H3
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 4px;
+    margin: 0px;
+    padding-top: 4px;
+}
+UL
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-top: 0px;
+    list-style-type: none;
+}
+IMG
+{
+    border-right: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+HR
+{
+    margin: 10px 0px;
+    color: #d0d0d0;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    height: 1px;
+    background-color: #c0c0c0;
+    border-bottom-style: none;
+}
+.content
+{
+    margin: 0px auto;
+    width: 100%;
+    height: 100%;
+}
+#top
+{
+    background: none transparent scroll repeat 0% 0%;
+    padding-top: 10px;
+    height: 138px;
+    background-image: url(Accheader.jpg);
+    vertical-align: bottom;
+}
+#top H1
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 4px;
+    margin: 0px;
+    font: bold 1.8em Arial, Sans-Serif;
+    color: #fff;
+    padding-top: 8px;
+    letter-spacing: 1px;
+}
+#top H2
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+    font: 1em Arial, Sans-Serif;
+    color: #868686;
+    padding-top: 0px;
+    letter-spacing: 0px;
+}
+#top #icons
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    float: right;
+    padding-bottom: 0px;
+    margin: 20px 0px;
+    padding-top: 0px;
+}
+#top #icons IMG
+{
+    border-right: 0px;
+    padding-right: 2px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+
+#prec
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    background: #f6f6f6;
+    padding-bottom: 0px;
+    margin: 0px 0px 15px;
+    overflow: hidden;
+    padding-top: 0px;
+    border-bottom: #dcdcdc 1px solid;
+    height: 500px;
+}
+#wrap
+{
+    margin: 0px auto;
+    width: 800px;
+}
+#wrap #pic
+{
+    background: url(mainimg.jpg) #ff0000 no-repeat;
+    float: right;
+    overflow: hidden;
+    width: 589px;
+    height: 199px;
+}
+#wrap #pic #slogan
+{
+    padding-right: 30px;
+    padding-left: 30px;
+    float: right;
+    padding-bottom: 10px;
+    padding-top: 25px;
+    text-align: right;
+}
+#wrap #pic #slogan H1
+{
+    margin: 0px;
+    font: bold 1.4em Arial, Sans-Serif;
+    color: #fff;
+    letter-spacing: 1px;
+}
+#wrap #pic #slogan H2
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    margin: 0px;
+    font: 1em Arial, Sans-Serif;
+    color: #fff;
+    padding-top: 10px;
+    letter-spacing: 0px;
+}
+#wrap #pic #slogan A
+{
+    color: #fff;
+}
+#wrap #menu
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    background: none transparent scroll repeat 0% 0%;
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-top: 0px;
+}
+#wrap #menu A
+{
+    padding-left: 25px;
+    background: url(lm-li.gif) #f6f6f6 no-repeat left 50%;
+    font: 0.9em Arial, Sans-Serif;
+    text-decoration: none;
+}
+#wrap #menu UL
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+#wrap #menu LI
+{
+    background: url(li-line.gif) #f6f6f6 no-repeat left bottom;
+    line-height: 26px;
+    list-style-type: none;
+}
+#ad
+{
+    padding-left: 95px;
+    min-height: 80px;
+    background: url(download.jpg) #fff no-repeat left 50%;
+    margin-bottom: 15px;
+}
+#AnonWrapper
+{
+    background-image: url(tiger2-798305.jpg);
+    text-align: left;
+    margin: auto;
+    width: 877px;
+    height: 100%;
+}
+#headline
+{
+    padding-top: 20px;
+}
+#body
+{
+    padding-top: 5em;
+    text-align: justify;
+    float: left;
+    width: 877px;
+    height: 100%;
+}
+#footer
+{
+    color: #FFFFFF;
+    background: #42453D url(footer_bg.gif) repeat-x;
+    padding: 2px 0 0px 0;
+    margin-top: 0em;
+    font-weight: bold;
+    vertical-align: middle;
+}
+#ad A
+{
+    background: #fff;
+    text-decoration: none;
+}
+#left_side A
+{
+    background: #fff;
+    text-decoration: none;
+}
+#ad A:hover
+{
+    text-decoration: underline;
+}
+#left_side A:hover
+{
+    text-decoration: underline;
+}
+#main
+{
+}
+#right_side
+{
+    padding-right: 10px;
+    padding-left: 10px;
+    background: #f6f6f6;
+    float: right;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    width: 212px;
+    padding-top: 5px;
+}
+#right_side UL
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 8px;
+    padding-top: 3px;
+}
+#right_side LI
+{
+    padding-left: 20px;
+    background: url(cat-li.gif) #f6f6f6 no-repeat left 50%;
+    line-height: 18px;
+    list-style-type: none;
+}
+#right_side A
+{
+    background: #f6f6f6;
+    text-decoration: none;
+}
+#right_side H3
+{
+    font: bold 1.2em Arial, Sans-Serif;
+    color: #404040;
+}
+#left_side
+{
+    background: #fff;
+    margin-bottom: 10px;
+    width: 560px;
+}
+#left_side H3
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    background: url(hbg.gif) #fff repeat-x;
+    padding-bottom: 0px;
+    margin: 0px;
+    font: bold 1.2em Arial, Sans-Serif;
+    padding-top: 5px;
+    height: 30px;
+}
+#left_side H3 SPAN
+{
+    padding-right: 10px;
+    padding-left: 23px;
+    background: url(h-art.gif) no-repeat left 50%;
+    padding-bottom: 0px;
+    margin: 0px;
+    line-height: 22px;
+    padding-top: 1px;
+}
+#left_side P
+{
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 0px;
+    color: #454545;
+    padding-top: 0px;
+    text-align: justify;
+}
+#left_side IMG
+{
+    padding-right: 10px;
+    padding-left: 0px;
+    float: left;
+    padding-bottom: 5px;
+    padding-top: 0px;
+}
+#left_side BLOCKQUOTE
+{
+    padding-left: 10px;
+    margin: 10px 0px 10px 25px;
+    border-left: #da4040 2px solid;
+}
+.date
+{
+    padding-right: 0px;
+    border-top: #ccc 1px dotted;
+    padding-left: 0px;
+    padding-bottom: 5px;
+    margin: 10px 0px 25px;
+    padding-top: 5px;
+    text-align: right;
+}
+#left_side .rs
+{
+    border-right: #ddd 1px solid;
+    padding-right: 5px;
+    border-top: #ddd 1px solid;
+    padding-left: 5px;
+    background: #f5f5f5;
+    float: right;
+    padding-bottom: 5px;
+    margin: 0px 10px;
+    border-left: #ddd 1px solid;
+    padding-top: 5px;
+    border-bottom: #ddd 1px solid;
+}
+#left_side UL
+{
+    list-style-position: inside;
+    margin-left: 2px;
+}
+#left_side UL LI
+{
+    margin-left: 15px;
+    list-style-type: square;
+}
+#left_side UL UL LI
+{
+    list-style-position: inside;
+    margin-left: 10px;
+    list-style-type: lower-alpha;
+}
+#footer
+{
+    clear: both;
+    border-top: #dcdcdc 1px solid;
+    background: #fff;
+    margin: 0px 0px 3em;
+    color: #777;
+}
+#footer .right
+{
+    background: #fff;
+    float: right;
+    text-align: right;
+}
+#footer A
+{
+    background: #fff;
+    text-decoration: none;
+}
+.graypanel
+{
+    border-right: #666666 1px solid;
+    padding-right: 10px;
+    border-top: #666666 1px solid;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+    border-left: #666666 1px solid;
+    padding-top: 5px;
+    border-bottom: #666666 1px solid;
+    background-color: #A0AF6B;
+}
+.loginbt
+{
+    background: url(loginbtn.jpg);
+}
+.hdrtbl
+{
+    border-collapse: collapse;
+    border-right: 2px solid;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+}
+#tdcls
+{
+    border-collapse: collapse;
+    color: #708322;
+    background-color: #FEFFDA;
+}
+
+.masterTable
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+.gridTable
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+.menuStyle
+{
+    width: 180px;
+    height: 100%;
+}
+.bodytext
+{
+    color: #666666;
+}
+.titletext
+{
+    font-weight: bold;
+    font-size: 36px;
+    color: #cc0000;
+}
+.whitetitle
+{
+    font-weight: bold;
+    font-size: 36px;
+    color: #ffffff;
+}
+.smalltitle
+{
+    font-weight: bold;
+    font-size: 20px;
+    color: #cc0000;
+}
+.smallwhitetext
+{
+    font-weight: bold;
+    font-size: 11px;
+    color: #ffffff;
+}
+.smallwhitetext A
+{
+    font-weight: bold;
+    font-size: 11px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.smallwhitetext A:hover
+{
+    text-decoration: underline;
+}
+.smallgraytext
+{
+    font-weight: bold;
+    font-size: 11px;
+    color: #999999;
+}
+.smallgraytext A
+{
+    font-weight: bold;
+    font-size: 11px;
+    color: #999999;
+    text-decoration: none;
+}
+.smallgraytext A:hover
+{
+    text-decoration: underline;
+}
+.smallredtext
+{
+    font-weight: normal;
+    font-size: 14px;
+    color: #cc0000;
+}
+.smallredtext A
+{
+    font-weight: normal;
+    font-size: 14px;
+    color: #cc0000;
+}
+.smallredtext A:hover
+{
+    font-weight: normal;
+    font-size: 14px;
+    color: #7E8E36;
+    background-color: #FEFFDA;
+    text-decoration: underline;
+}
+.label
+{
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #fbfbfb;
+}
+.textbox
+{
+    font-size: 12px;
+    background-color: #fbfbfb;
+}
+.button
+{
+    color: #004040;
+    background-color: #f2f5f7;
+    cursor: pointer;
+}
+
+.gridHeaderStyle
+{
+    font-weight: bold;
+    font-size: 12px;
+    background-image: url(images\gridHeader.GIF);
+    color: #FEFFDA;
+    background-color: Gray;
+}
+.gridAlterStyle
+{
+    background-color: #FEFFDA;
+}
+.gridLabel
+{
+    font-size: 10px;
+}
+.menuleafNodeStyle
+{
+    font-weight: normal;
+    font-size: 14px;
+    color: White;
+}
+.pageHeaderTitleStyle
+{
+    background: red;
+    color: white;
+}
+.userNameLabel
+{
+    font-weight: bold;
+    font-size: 14px;
+    color: #b22222;
+}
+.solid-green
+{
+    background: #008000;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 4px;
+    text-align: center;
+}
+
+.Pad-L15
+{
+    padding-left: 15px;
+}
+
+.Pad-L10
+{
+    padding-left: 15px;
+}
+
+.Pad-L5
+{
+    padding-left: 5px;
+}
+
+.Pad-T10
+{
+    padding-top: 10px;
+}
+
+.Pad-T5
+{
+    padding-top: 5px;
+}
+
+.Pad-B10
+{
+    padding-bottom: 10px;
+}
+
+
+#ctl00_ContentPlaceHolder1_vsChangePassword > UL
+{
+    list-style-type: disc !important;
+}
+
+.gridHeader
+{
+    background: #00938a;
+    border: 1px solid #00938a;
+    color: #ffffff;
+    padding-bottom: 4px;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.gridTableData {
+    border-collapse: collapse;
+    display: table;
+    width: 100%;
+}
+
+
+.gridTableData td {
+    border: 1px solid #00938a;
+    padding: 3px 7px 2px;
+    text-align: inherit;
+    vertical-align: top;
+}
+
+
+.gridTableData  th {
+    border: 1px solid white;
+    padding: 3px 7px 2px;
+    text-align: inherit;
+    vertical-align: top;
+}
+
+.gridTableData a {
+    color: #2e6e9e;
+    text-decoration: none;
+}
+
+.gridTableRowStyle {
+    padding: 3px 7px 2px;
+}
+
+.escalateBackColor
+{
+    background-color:#efefa8;
+    color:Black;
+    font-weight:bold;
+}
+.radioButtonList
+{
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #fbfbfb;
+}

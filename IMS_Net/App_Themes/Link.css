@@ -1,0 +1,143 @@
+﻿body
+{
+    font-family:Arial;
+    font-size:12px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-top: 0px;
+}
+
+ul
+{
+    margin-left: 1.2em;
+}
+li
+{
+    list-style-image: url(Image/li.gif);
+}
+
+.clsButton
+{
+    background: #00938a;
+    border: 1px solid #00938a;
+    color: #ffffff;
+    font-weight: bold;
+    width: 65px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.buttonStyle
+{
+    border-right: #7b9ebd 1px ridge;
+    padding-right: 4px;
+    border-top: #7b9ebd 1px solid;
+    padding-left: 4px;
+    font-weight: bold;
+    font-size: 10pt;
+    padding-bottom: 4px;
+    border-left: #7b9ebd 1px ridge;
+    cursor: hand;
+    color: Maroon;
+    padding-top: 1px;
+    border-bottom: #7b9ebd 1px ridge;
+    height: 22px;
+    background-color: silver;
+}
+
+.gridButton
+{
+    border-width: 1px;
+    border-style: solid;
+    color: #5699A7;
+    width: 80px;
+}
+
+/* navigation */
+.navigation
+{
+    float: left;
+    font: normal 75% "Lucida Sans Unicode" ,sans-serif 10pt;
+}
+
+.navigation h1
+{
+    background: #81AC00;
+    color: #FFF;
+    font-size: 1.3em;
+    line-height: 10px;
+    padding-left: 8px;
+    margin-top: 6px;
+}
+.navigation ul
+{
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+}
+.navigation li
+{
+    border-bottom: 1px solid #D5E8AD;
+    list-style: none;
+    line-height: 5px;
+    font-size: 8pt;
+}
+.navigation li a
+{
+    background: #E5E5E4 url(Image/bgnavigation.gif) repeat-x; /*color: #553;*/
+    color: #5699A7;
+    display: block;
+    padding: 8px 4px 8px 12px;
+    text-decoration: none;
+}
+.navigation li a:hover
+{
+    background: #F0FFC6;
+    color: #553;
+}
+.tblFont
+{
+    font-size: 18;
+    font-style: normal;
+    font-family: Arial;
+}
+
+.heading
+{
+    font-size: 14px;
+    font-family: Calibri, Tahoma, Arial;
+    color: White;
+    font-weight: bold;
+}
+
+.tdHeading
+{
+    background-color: #00938a;
+    padding-left: 15px;
+}
+.tdQuestionheader
+{
+    background-color: #4FB798;
+    padding-left: 15px;
+}
+
+.tableAnswer td {
+    padding-left:10px !important;
+}
+
+.tableAnswer label {
+   font-weight:bold;
+}
+
+.tdHeadingcal
+{
+    background: url(../images/tb_h_bg_green.gif) repeat-x;
+    height: 25px;
+}
+
+.topHeaderImg
+{
+    background-image: url(../images/Header.jpg);
+    width: 100%;
+}

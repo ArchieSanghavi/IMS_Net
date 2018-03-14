@@ -1,0 +1,88 @@
+﻿/* Calender */
+.dpDiv
+{
+	width:300px;
+}
+.dpTable
+{
+    BORDER-RIGHT: #aaaaaa 1px solid;
+    BORDER-TOP: #aaaaaa 1px solid;
+    FONT-SIZE: 8pt;
+    color:Gray;
+    BORDER-LEFT: #aaaaaa 1px solid;
+    BORDER-BOTTOM: #aaaaaa 1px solid;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: white; 
+    width:200px;
+    TEXT-ALIGN: center
+}
+.dpTR
+{
+}
+.dpTitleTR
+{
+}
+.dpDayTR
+{
+}
+.dpTodayButtonTR
+{
+}
+.dpTD
+{
+    CURSOR: pointer;
+    TEXT-DECORATION: underline
+}
+.dpDayHighlightTD
+{  
+    CURSOR: pointer;   
+    BACKGROUND-COLOR: #336633
+}
+.dpTitleTD
+{
+}
+.dpButtonTD
+{
+}
+.dpTodayButtonTD
+{
+}
+.dpDayTD
+{
+    BORDER-RIGHT: #aaaaaa 1px solid;
+    BORDER-TOP: #aaaaaa 1px solid;
+    BORDER-LEFT: #aaaaaa 1px solid;
+    COLOR: white;
+    BORDER-BOTTOM: #aaaaaa 1px solid;
+    BACKGROUND-COLOR: #81AC00
+}
+.dpTitleText
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #336633;
+    
+}
+.dpDayHighlight
+{
+    FONT-WEIGHT: bold;
+    COLOR: white;
+}
+.dpButton
+{
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;    
+    FONT-SIZE: 10px;
+    BACKGROUND: #C0C0C0;
+    PADDING-BOTTOM: 0px;
+    COLOR: black;
+    PADDING-TOP: 0px;
+    FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica, sans-serif
+}
+.dpTodayButton
+{    
+    FONT-SIZE: 10px;
+    BACKGROUND: #C0C0C0;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica, sans-serif
+}
