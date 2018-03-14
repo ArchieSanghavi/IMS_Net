@@ -184,6 +184,15 @@ namespace IMS_Net.Admin {
         protected global::System.Web.UI.WebControls.Button btnpopup;
         
         /// <summary>
+        /// ModalPopupExtender1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ModalPopupExtender ModalPopupExtender1;
+        
+        /// <summary>
         /// Panel1 control.
         /// </summary>
         /// <remarks>
@@ -202,15 +211,6 @@ namespace IMS_Net.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtsearch;
         
         /// <summary>
-        /// updatepanelpopup control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel updatepanelpopup;
-        
-        /// <summary>
         /// popupgv control.
         /// </summary>
         /// <remarks>
@@ -218,15 +218,6 @@ namespace IMS_Net.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView popupgv;
-        
-        /// <summary>
-        /// CheckBoxList1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList1;
         
         /// <summary>
         /// btnOkay control.

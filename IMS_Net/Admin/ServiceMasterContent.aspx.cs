@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using IMS_Net.Admin.DB;
 
 namespace IMS_Net.Admin
 {
@@ -20,7 +21,7 @@ namespace IMS_Net.Admin
         {
             if (!IsPostBack)
             {
-                btnUpdate.Visible=r_Error1.Visible = false;
+                btnUpdate.Visible = r_Error1.Visible = false;
                 FillGridView();
             }
 
@@ -35,7 +36,6 @@ namespace IMS_Net.Admin
         {
             try
             {
-                string strmsg;
                 DataUtility data = null;
                 if (Page.IsValid)
                 {
@@ -51,28 +51,23 @@ namespace IMS_Net.Admin
                                             new SqlParameter("@Flag", 1)
                                             //new SqlParameter("@msg",SqlDbType.VarChar,100)
                                            };
-                      data = new DataUtility();
+                    data = new DataUtility();
 
-                    strmsg=data.ExecuteStoredProc("ServiceMasterInsert", param,1);
-                    
+                    data.ExecuteStoredProc("ServiceMasterInsert", param, 1);
+
                     Clear();
-                    
+
                     r_Error1.Visible = true;
-                    if (strmsg == "1")
-                    {
-                        lblErrorMsg.Text = "Service Line Already Exists.......";
-                    }
-                    else
-                    {
-                        lblSuccessMsg.Text = "New Service Line Added.......";
-                    }
+
+                    lblSuccessMsg.Text = "Saved Successfully.......";
+
                     FillGridView();
                 }
 
                 else
                 {
                     r_Error1.Visible = true;
-                    lblErrorMsg.Text = "Service Line Error Occured.......";
+                    lblErrorMsg.Text = "Error Occured.......";
                 }
             }
             catch { throw; }
@@ -82,14 +77,13 @@ namespace IMS_Net.Admin
         {
             try
             {
-                string strmsg;
                 DataUtility data = null;
 
                 if (Page.IsValid)
                 {
                     btnSave.Visible = false;
-                    //txtServicelineCode.ReadOnly = true;
-                   string servicelinecode = Convert.ToString((sender as Button).CommandArgument);
+
+                    string servicelinecode = Convert.ToString((sender as Button).CommandArgument);
 
                     SqlParameter[] param ={
                                             new SqlParameter("@ServiceLineCode",servicelinecode),
@@ -104,7 +98,7 @@ namespace IMS_Net.Admin
                                           };
                     data = new DataUtility();
 
-                    strmsg = data.ExecuteStoredProc("ServiceMasterInsert", param,1);
+                    data.ExecuteStoredProc("ServiceMasterInsert", param, 1);
 
                     Clear();
 
@@ -129,12 +123,13 @@ namespace IMS_Net.Admin
         protected void lnkView_Click(object sender, EventArgs e)
         {
             DataSet ds = null;
-           
+
             try
             {
-                btnSave.Visible= r_Error1.Visible = false;
+                btnSave.Visible = false;
+                r_Error1.Visible = false;
                 lblSuccessMsg.Text = lblErrorMsg.Text = "";
-                btnUpdate.Visible= txtServicelineCode.ReadOnly  = true;
+                btnUpdate.Visible = true;
 
                 string servicelinecode = Convert.ToString((sender as LinkButton).CommandArgument);
 
@@ -143,10 +138,10 @@ namespace IMS_Net.Admin
                                       };
                 ds = new DataSet();
                 ds = IMS_Net.Admin.Utility3.Database.GetData(strConnections, "ServiceMasterGridView", param);
-                
+
 
                 btnUpdate.CommandArgument = ds.Tables[0].Rows[0]["Service_Line_Code"].ToString();
-                txtServicelineCode.Text= ds.Tables[0].Rows[0]["Service_Line_Code"].ToString();
+                txtServicelineCode.Text = ds.Tables[0].Rows[0]["Service_Line_Code"].ToString();
                 txtDescription.Text = ds.Tables[0].Rows[0]["Description"].ToString();
                 rblActive.SelectedValue = ds.Tables[0].Rows[0]["Active"].ToString();
             }
@@ -161,7 +156,7 @@ namespace IMS_Net.Admin
 
         public void Clear()
         {
-            txtServicelineCode.Text=txtDescription.Text = lblErrorMsg.Text = lblSuccessMsg.Text = "";
+            txtServicelineCode.Text = txtDescription.Text = lblErrorMsg.Text = lblSuccessMsg.Text = "";
             rblActive.SelectedValue = "True";
             btnSave.Visible = true;
             btnUpdate.Visible = r_Error1.Visible = false;
@@ -193,5 +188,6 @@ namespace IMS_Net.Admin
             this.FillGridView();
         }
         #endregion
+
     }
 }

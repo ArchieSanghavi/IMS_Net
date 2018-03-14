@@ -13,19 +13,21 @@ using System.Data.SqlClient;
 using System.Web.Services;
 using System.Collections.Generic;
 
+
 namespace IMS_Net.Admin
 {
     public partial class IMSNetMaster : System.Web.UI.MasterPage
     {
-        #region variableDeclare
+
+        # region variableDeclare
 
         string strCon = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         SqlConnection sqlCon;
 
-        #endregion
+        # endregion
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["username"] = "test";
+            Session["UserName"] = "Jil";
         }
 
         protected void Page_Init(object sender, EventArgs e)
@@ -83,7 +85,7 @@ namespace IMS_Net.Admin
             DataTable dt = new DataTable();
             List<string> customers = new List<string>();
             SqlParameter[] paramList = {
-                                       new SqlParameter("@User",prefix.Trim())
+                                       new SqlParameter("@User",prefix.Trim())                                 
         };
 
             dt = Utility3.Database.GetData(Convert.ToString(ConfigurationManager.ConnectionStrings["ConStr"]), "GetUsersList", paramList).Tables[0];
@@ -102,5 +104,4 @@ namespace IMS_Net.Admin
         }
 
     }
-
 }
