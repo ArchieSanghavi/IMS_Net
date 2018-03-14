@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+using IMS_Net.Admin.DB;
+
 
 namespace IMS_Net.Admin
 {
@@ -46,7 +48,7 @@ namespace IMS_Net.Admin
                 FillGrid();
                 btnClickpopup();
 
-
+                btnpopup_Clear();
             }
         }
 
@@ -181,10 +183,12 @@ namespace IMS_Net.Admin
                                                  new SqlParameter("@Company_Id",1000),
                                                  new SqlParameter("@Service_Line_Code",ddlservicelinecode.SelectedValue),
                                                  new SqlParameter("@Module_Code",ddlmodulecode.SelectedValue),
-
+                                                
                                                  new SqlParameter("@complaint_code",code),
                                                  new SqlParameter("@CreatedBy",Session["UserName"]),
-                                                 new SqlParameter("@CreatedDate", DateTime.Now)
+                                                 new SqlParameter("@CreatedDate", DateTime.Now),
+                                                 new SqlParameter("@Flag", 1)
+                                           
                                               };
 
 
@@ -200,7 +204,7 @@ namespace IMS_Net.Admin
                     }
                     ClearData();
                     FillGrid();
-
+                    btnpopup_Clear();
                     r_Error1.Visible = true;
 
                     lblinsert.Text = "New Solution Added";
@@ -247,12 +251,14 @@ namespace IMS_Net.Admin
                                     
                                    // new SqlParameter("@complaint_code",CheckBoxList1.SelectedValue),
                                     new SqlParameter("@UpdatedBy",Session["UserName"]),
-                                    new SqlParameter("@UpdatedDate", DateTime.Now)
+                                    new SqlParameter("@UpdatedDate", DateTime.Now),
+                                    new SqlParameter("@Flag", 2),
+                                  
                                 };
 
                                 data = new DataUtility();
 
-                                data.ExecuteProc("updateComplaintMapping", sqlParam);
+                                data.ExecuteProc("insertComplaintMapping", sqlParam);
 
                             }
                         }
@@ -263,7 +269,7 @@ namespace IMS_Net.Admin
                     btnsave.Visible = true;
 
                     ClearData();
-
+                    btnpopup_Clear();
 
                     FillGrid();
                     r_Error1.Visible = true;
@@ -292,6 +298,7 @@ namespace IMS_Net.Admin
         protected void btnclear_Click(object sender, EventArgs e)
         {
             ClearData();
+            btnpopup_Clear();
 
             btnupdate.Visible = false;
 
@@ -313,21 +320,19 @@ namespace IMS_Net.Admin
                                     new SqlParameter("@Service_Line_Code",ServiceLineCode),
                                     new SqlParameter("@Module_Code",ModuleCode),
                                     new SqlParameter("@complaint_code",complaintcode)
-
+                                   
                                           };
 
                 ds = new DataSet();
                 ds = IMS_Net.Admin.Utility3.Database.GetData(strConnections, "GetDataComplaintMapping", sqlParam);
 
-
                 ddlservicelinecode.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["Service_Line_Code"]);
                 binddropdowmlist();
-
                 ddlmodulecode.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["Module_Code"]);
-                txtcompaintcode.Text = Convert.ToString(ds.Tables[0].Rows[0]["complaint_code"]);
                 hfservicelinecode.Value = Convert.ToString(ds.Tables[0].Rows[0]["Service_Line_Code"]);
                 hfmodulecode.Value = Convert.ToString(ds.Tables[0].Rows[0]["Module_Code"]);
                 hfcomplaintcode.Value = Convert.ToString(ds.Tables[0].Rows[0]["complaint_code"]);
+                ChkMatch();
 
 
                 btnupdate.Visible = true;
@@ -358,16 +363,16 @@ namespace IMS_Net.Admin
         {
             SqlConnection con = new SqlConnection(strConnections);
             con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT Description,Complaint_Code from COMPLAINT_MASTER where Description like '" + txtsearch.Text + "%'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT Description,Complaint_Code from COMPLAINT_MASTER where Active='1' AND Description like '" + txtsearch.Text + "%'", con);
             DataSet ds = new DataSet();
             sda.Fill(ds);
             popupgv.DataSource = ds;
             popupgv.DataBind();
             con.Close();
-
+            ModalPopupExtender1.Show();
         }
 
-        protected void btnpopup_Click(object sender, EventArgs e)
+        protected void btnpopup_Clear()
         {
             foreach (GridViewRow gvrow in popupgv.Rows)
             {
@@ -379,7 +384,6 @@ namespace IMS_Net.Admin
                 }
             }
         }
-
 
         #endregion
 
@@ -394,9 +398,9 @@ namespace IMS_Net.Admin
             {
 
                 SqlParameter[] sqlParam = {
-
+                                    
                                     new SqlParameter("@Service_Line_Code",Service_Line_Code),
-
+                                    
                                               };
 
 
@@ -509,11 +513,11 @@ namespace IMS_Net.Admin
             try
             {
                 SqlParameter[] sqlParam = {
-
+                                    
                                     new SqlParameter("@Service_Line_Code",DBNull.Value),
                                     new SqlParameter("@Module_Code",DBNull.Value),
                                     new SqlParameter("@complaint_code",DBNull.Value)
-
+                                 
                                               };
 
 
@@ -550,6 +554,27 @@ namespace IMS_Net.Admin
 
         }
 
+        public void ChkMatch()
+        {
+            foreach (GridViewRow gvrow in popupgv.Rows)
+            {
+                if (gvrow.RowType == DataControlRowType.DataRow)
+                {
+                    string description = gvrow.Cells[2].Text;
+
+                    if (hfcomplaintcode.Value == description)
+                    {
+                        //var checkbox = gvrow.FindControl("chkpopup") as CheckBox;
+                        CheckBox chkRow = (gvrow.Cells[0].FindControl("chkpopup") as CheckBox);
+                        chkRow.Checked = true;
+
+                    }
+                }
+            }
+
+        }
+
         #endregion
+
     }
 }

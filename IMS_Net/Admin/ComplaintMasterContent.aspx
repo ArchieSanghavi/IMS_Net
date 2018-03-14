@@ -1,11 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/IMSNetMaster.Master" AutoEventWireup="true" CodeBehind="ComplaintMasterContent.aspx.cs" Inherits="IMS_Net.Admin.ComplaintMaster" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:UpdatePanel ID="udpComplaintMaster" runat="server">
-        <ContentTemplate>
-            <table width="100%" border="0" cellpadding="0" cellspacing="0">
 
-                <tr>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <asp:UpdatePanel ID="udpComplaintMaster" runat="server"><ContentTemplate>
+
+       <tr>
                     <td colspan="4" class="tdHeading">
                         <asp:Label ID="Label1" runat="server" Text="Complaint Master " CssClass="heading"></asp:Label>
                     </td>
@@ -92,7 +91,8 @@
                         </asp:GridView>
                     </td>
                 </tr>
-            </table>
-        </ContentTemplate>
-    </asp:UpdatePanel>
+
+      </ContentTemplate></asp:UpdatePanel>
+        </table>
+
 </asp:Content>

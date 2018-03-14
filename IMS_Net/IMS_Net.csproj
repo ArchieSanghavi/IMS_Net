@@ -1,6 +1,5 @@
-﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
-  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -8,22 +7,18 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{91D2A692-D171-48B5-A3C6-D40648445409}</ProjectGuid>
+    <ProjectGuid>{EEA7363A-B919-4905-A3BA-4F9B70995254}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IMS_Net</RootNamespace>
     <AssemblyName>IMS_Net</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,7 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
@@ -44,11 +38,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExcelLibrary">
-      <HintPath>.\ExcelLibrary.dll</HintPath>
+    <Reference Include="AjaxControlToolkit, Version=15.1.3.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Tirth\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    <Reference Include="ExcelLibrary">
+      <HintPath>..\..\ExcelLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -69,40 +64,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\Complaint_Master.aspx" />
-    <Content Include="Admin\Service_Line_Module_Master.aspx" />
-    <Content Include="Admin\Service_Master.aspx" />
     <Content Include="Admin\ComplaintMasterContent.aspx" />
     <Content Include="Admin\ServiceMasterContent.aspx" />
     <Content Include="Admin\Service_Line_ModuleContent.aspx" />
+    <Content Include="Admin\SolutionMaster.aspx" />
+    <Content Include="Admin\App_Themes\AnonMasterStyle.css" />
+    <Content Include="Admin\App_Themes\Calender.css" />
+    <Content Include="Admin\App_Themes\holiday_Calendar.css" />
+    <Content Include="Admin\App_Themes\Link.css" />
+    <Content Include="Admin\App_Themes\Menu.css" />
+    <Content Include="Admin\App_Themes\pie.htc" />
+    <Content Include="Admin\App_Themes\StyleSheet.css" />
     <Content Include="Admin\ComplaintMapping.aspx" />
-    <Content Include="App_Themes\GreenTheme\SkinFile.skin" />
-    <Content Include="App_Themes\GreenTheme\vssver.scc" />
-    <Content Include="App_Themes\vssver.scc" />
-    <Content Include="images\AccLogo.zip" />
-    <Content Include="images\AccLogo\AccLogo\vssver.scc" />
-    <Content Include="images\mainimg.psd" />
-    <Content Include="images\Untitled-2.psd" />
-    <Content Include="images\Untitled-4.psd" />
-    <Content Include="images\User Guide-IMS.pdf" />
-    <Content Include="images\vssver.scc" />
-    <Content Include="Admin\IMSNetMaster.Master" />
-    <None Include="packages.config" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Themes\AnonMasterStyle.css" />
-    <Content Include="App_Themes\Calender.css" />
-    <Content Include="App_Themes\holiday_Calendar.css" />
-    <Content Include="App_Themes\Link.css" />
-    <Content Include="App_Themes\Menu.css" />
-    <Content Include="App_Themes\pie.htc" />
-    <Content Include="App_Themes\StyleSheet.css" />
     <Content Include="Global.asax" />
     <Content Include="images\absu_logo_green.gif" />
     <Content Include="images\Accenture.bmp" />
@@ -171,46 +144,23 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\Complaint_Master.aspx.cs">
-      <DependentUpon>Complaint_Master.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Complaint_Master.aspx.designer.cs">
-      <DependentUpon>Complaint_Master.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\DataUtility.cs" />
-    <Compile Include="Admin\IMSNetMaster.Master.cs">
-      <DependentUpon>IMSNetMaster.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\IMSNetMaster.Master.designer.cs">
-      <DependentUpon>IMSNetMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Service_Line_Module_Master.aspx.cs">
-      <DependentUpon>Service_Line_Module_Master.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Service_Line_Module_Master.aspx.designer.cs">
-      <DependentUpon>Service_Line_Module_Master.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Service_Master.aspx.cs">
-      <DependentUpon>Service_Master.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Service_Master.aspx.designer.cs">
-      <DependentUpon>Service_Master.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Utility.cs" />
-    <Compile Include="Admin\Utility2.cs" />
-    <Compile Include="Admin\Utility3.cs" />
     <Compile Include="Admin\ComplaintMasterContent.aspx.cs">
       <DependentUpon>ComplaintMasterContent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\ComplaintMasterContent.aspx.designer.cs">
       <DependentUpon>ComplaintMasterContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DB\DataUtility.cs" />
+    <Compile Include="Admin\IMSNetMaster.Master.cs">
+      <DependentUpon>IMSNetMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IMSNetMaster.Master.designer.cs">
+      <DependentUpon>IMSNetMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Admin\ServiceMasterContent.aspx.cs">
       <DependentUpon>ServiceMasterContent.aspx</DependentUpon>
@@ -226,6 +176,16 @@
     <Compile Include="Admin\Service_Line_ModuleContent.aspx.designer.cs">
       <DependentUpon>Service_Line_ModuleContent.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Utility.cs" />
+    <Compile Include="Admin\Utility2.cs" />
+    <Compile Include="Admin\Utility3.cs" />
+    <Compile Include="Admin\SolutionMaster.aspx.cs">
+      <DependentUpon>SolutionMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SolutionMaster.aspx.designer.cs">
+      <DependentUpon>SolutionMaster.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ComplaintMapping.aspx.cs">
       <DependentUpon>ComplaintMapping.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -237,12 +197,34 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="pageauth\" />
+    <Content Include="Admin\App_Themes\GreenTheme\SkinFile.skin" />
+    <Content Include="Admin\App_Themes\GreenTheme\vssver.scc" />
+    <Content Include="Admin\App_Themes\vssver.scc" />
+    <Content Include="images\AccLogo.zip" />
+    <Content Include="images\AccLogo\AccLogo\vssver.scc" />
+    <Content Include="images\mainimg.psd" />
+    <Content Include="images\Untitled-2.psd" />
+    <Content Include="images\Untitled-4.psd" />
+    <Content Include="images\User Guide-IMS.pdf" />
+    <Content Include="images\vssver.scc" />
+    <Content Include="Admin\IMSNetMaster.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -256,9 +238,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>60371</DevelopmentServerPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:60372/</IISUrl>
+          <IISUrl>http://localhost:49637/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -268,13 +250,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
