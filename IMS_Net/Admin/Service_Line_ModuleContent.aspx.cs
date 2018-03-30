@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using IMS_Net.Admin.DB;
 
 namespace IMS_Net.Admin
 {

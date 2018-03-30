@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Configuration;
 using System.Web;
@@ -15,6 +15,9 @@ using System.Security.Cryptography;
 using System.Globalization;
 using ExcelLibrary.SpreadSheet;
 
+/// <summary>
+/// Summary description for PopulateTree
+/// </summary>
 namespace IMS_Net.Admin
 {
     public class Utility2
